@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+.page-padding {
+    @apply p-6;
+}
+
+.component-padding {
+    @apply p-4;
+}
+
+h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+}
