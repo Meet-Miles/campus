@@ -23,7 +23,7 @@ export default function Home() {
                 <p className='text-blue'>Keukenhof</p>
                 <p className="text-blue/50 text-xs">2 - 12 personen</p>
               </div>
-              <div className='flex items-center gap-2 mr-4'>
+              <div className='flex items-center gap-1 mr-4'>
                 <img src="/not-available.svg" alt="Not available" className="w-4 h-4" />
                 <p className='text-red'>Bezet</p>
               </div>
@@ -36,7 +36,7 @@ export default function Home() {
                 <p className='text-blue'>Erasmusbrug</p>
                 <p className="text-blue/50 text-xs">2 - 12 personen</p>
               </div>
-              <div className='flex items-center gap-2 mr-4'>
+              <div className='flex items-center gap-1 mr-4'>
                 <img src="/not-available.svg" alt="Not available" className="w-4 h-4" />
                 <p className='text-red'>Bezet</p>
               </div>
@@ -61,24 +61,29 @@ export default function Home() {
         </section>
         <section className='page-padding grid grid-cols-1 gap-4'>
           <p className='text-blue'>Tools</p>
-          <div className='bg-grey  grid grid-cols-2 text-blue'>
-            <div className='flex flex-col h-full justify-between items-start p-4'>
-              <p className='text-xl'>Ga in gesprek met elkaar</p>
-              <a href="" className='text-sm font-serif'>Open Tool</a>
+          <a href="">
+            <div className='bg-grey cursor-pointer grid grid-cols-2 text-blue'>
+              <div className='flex flex-col h-full justify-between items-start p-4'>
+                <p className='text-xl'>Ga in gesprek met elkaar</p>
+                <p className='text-sm font-serif'>Open Tool</p>
+              </div>
+              <div>
+                <img src="/slack.png" className='w-full h-full object-cover' alt="Slack" />
+              </div>
             </div>
-            <div>
-              <img src="/slack.png" className='w-full h-full object-cover' alt="Slack" />
+          </a>
+          <a href="">
+            <div className='bg-grey cursor-pointer grid grid-cols-2 text-blue'>
+              <div>
+                <img src="/wetransfer.png" className='w-full h-full object-cover' alt="Slack" />
+              </div>
+
+              <div className='flex  flex-col h-full justify-between items-start p-4'>
+                <p className='text-xl'>Deel makkelijk documenten</p>
+                <p className='text-sm font-serif'>Open Tool</p>
+              </div>
             </div>
-          </div>
-          <div className='bg-grey grid grid-cols-2 text-blue'>
-            <div>
-              <img src="/wetransfer.png" className='w-full h-full object-cover' alt="Slack" />
-            </div>
-            <div className='flex flex-col h-full justify-between items-start p-4'>
-              <p className='text-xl'>Deel makkelijk documenten</p>
-              <a href="" className='text-sm font-serif'>Open Tool</a>
-            </div>
-          </div>
+          </a>
         </section>
       </div>
       <footer className='flex justify-between items-center page-padding text-sm text-blue/75' >
