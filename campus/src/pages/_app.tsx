@@ -6,7 +6,7 @@ const karbon = localFont({
     {
       path: './karbon.ttf',
       weight: '500',
-      style: 'normal',
+      style: 'medium',
     },
   ],
   variable: '--font-karbon'

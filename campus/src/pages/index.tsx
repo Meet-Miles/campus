@@ -9,7 +9,7 @@ export default function Home() {
       </header>
       <section className='page-padding flex flex-col items-start gap-8'>
         <img className='h-8' src="/logo.svg" alt="Logo" />
-        <h1 className='text-blue font-bold'>Welkom op de campus</h1>
+        <h1 className='text-blue '>Welkom op de campus</h1>
       </section>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding flex flex-col gap-4'>
@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <a href="mailto:campus@pzh.nl">
-            <button className='bg-blue w-full text-white rounded-md py-4 px-2 font-bold'>Boek een ruimte</button>
+            <button className='bg-blue w-full text-white rounded-md py-4 px-2'>Boek een ruimte</button>
           </a>
         </section>
         <section className='page-padding grid grid-cols-1 gap-4'>
