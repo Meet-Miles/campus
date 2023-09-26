@@ -9,10 +9,7 @@ export default function Home() {
       </header>
       <section className='page-padding flex flex-col items-start gap-8'>
         <img className='h-8' src="/logo.svg" alt="Logo" />
-        <div>
-          <img src="/time.svg" alt="" />
-          <h1 className='text-blue font-bold'>Welkom op de campus</h1>
-        </div>
+        <h1 className='text-blue font-bold'>Welkom op de campus</h1>
       </section>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding flex flex-col gap-4'>
