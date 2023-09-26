@@ -5,6 +5,10 @@
 :root {
 }
 
+* {
+    @apply font-sans;
+}
+
 .page-padding {
     @apply p-6;
 }
