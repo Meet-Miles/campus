@@ -64,7 +64,7 @@ export default function Home() {
           <div className='bg-grey  grid grid-cols-2 text-blue'>
             <div className='flex flex-col h-full justify-between items-start p-4'>
               <p className='text-xl'>Ga in gesprek met elkaar</p>
-              <a href="" className='text-sm font-serif'>Open Slack</a>
+              <a href="" className='text-sm font-serif'>Open Tool</a>
             </div>
             <div>
               <img src="/slack.png" className='w-full h-full object-cover' alt="Slack" />
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <div className='flex flex-col h-full justify-between items-start p-4'>
               <p className='text-xl'>Deel makkelijk documenten</p>
-              <a href="" className='text-sm font-serif'>Open WeTransfer</a>
+              <a href="" className='text-sm font-serif'>Open Tool</a>
             </div>
           </div>
         </section>
