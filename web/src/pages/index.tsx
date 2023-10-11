@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <Header />
       {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
-      <div className={`bg-white h-[100svh] sm:h-auto fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
+      <div className={`bg-white min-h-[100svh] sm:h-auto fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
         <div className="p-4 flex flex-col gap-4 max-w-4xl m-auto">
           <div className="w-full flex justify-between items-center">
             <p className='text-blue text-2xl'>Ruimtes</p>
