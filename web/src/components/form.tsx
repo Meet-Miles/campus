@@ -93,16 +93,16 @@ export function Form() {
             </select>
             <div className="w-full flex flex-col gap-2">
                 <p className="text-blue/75 flex flex-col gap-2">Datum</p>
-                <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             </div>
             <div className="flex w-full justify-between gap-4">
                 <div className="w-full flex flex-col gap-2">
                     <p className="text-blue/75 flex flex-col gap-2">Start tijd</p>
-                    <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
                 <div className="w-full flex flex-col gap-2">
                     <p className="text-blue/75 ">Eind tijd</p>
-                    <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
             </div>
             <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
