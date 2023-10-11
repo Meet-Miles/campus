@@ -45,8 +45,8 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                     alt="Logo for Campus"
                 />
 
-                <Heading style={{ ...h1, textAlign: 'center' }}>We hebben uw aanvraag voor de ruimte &quot;{space}&quot; ontvangen.</Heading>
-                <Text style={{ ...h2, textAlign: 'center' }}>Als deze ruimte beschikbaar is op {date} om {startTime}, zullen we een bevestiging sturen voor uw aanvraag.</Text>
+                <Heading style={{ ...h1, textAlign: 'center' }}>We hebben uw aanvraag voor de ruimte <span style={{ color: "#2E3092" }}>{space}</span> ontvangen.</Heading>
+                <Text style={{ ...h2, textAlign: 'center' }}>Als deze ruimte beschikbaar is op <span style={{ color: "#2E3092" }}>{date}</span> van <span style={{ color: "#2E3092" }}>{startTime}</span> tot <span style={{ color: "#2E3092" }}>{endTime}</span>, zullen we een bevestiging sturen voor uw aanvraag.</Text>
                 <a href="https://campus-eight.vercel.app" style={{ textDecoration: 'none' }} target='_blank' rel='noreferrer'>
                     <Text style={{ ...button, textAlign: 'center' }}>Maak nog een boeking</Text>
                 </a>

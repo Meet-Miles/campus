@@ -87,8 +87,6 @@ export function Form() {
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <select required name="space" id="space" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
                 <option value="" selected disabled hidden>Kies een ruimte</option>
-                <option value="Entree">Entree</option>
-                <option value="Volgo">Ontmoetplein</option>
                 <option value="Atelier">Atelier</option>
                 <option value="Landschapszaal">Landschapszaal</option>
                 <option value="Co-creatie">Co-creatie</option>
