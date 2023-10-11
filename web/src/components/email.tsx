@@ -45,7 +45,7 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                     alt="Logo for Campus"
                 />
 
-                <Heading style={{ ...h1, textAlign: 'center' }}>We hebben uw aanvraag voor de ruimte "{space}" ontvangen.</Heading>
+                <Heading style={{ ...h1, textAlign: 'center' }}>We hebben uw aanvraag voor de ruimte &quot;{space}&quot; ontvangen.</Heading>
                 <Text style={{ ...h2, textAlign: 'center' }}>Zodra we .</Text>
                 <a href="https://timetouchedvillage.nl" style={{ textDecoration: 'none' }} target='_blank' rel='noreferrer'>
                     <Text style={{ ...button, textAlign: 'center' }}>Play Again</Text>
