@@ -5,12 +5,21 @@ import { Header } from "@/components/header";
 import { Space } from "@/components/space";
 import { Tool } from "@/components/tool";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.body.style.overflow = open ? 'hidden' : 'auto';
+      // Cleanup
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }
+  }, [open]);
 
   return (
     <div
