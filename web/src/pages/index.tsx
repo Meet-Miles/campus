@@ -1,3 +1,4 @@
+import { Button } from "@/components/button";
 import { Footer } from "@/components/footer";
 import { Form } from "@/components/form";
 import { Header } from "@/components/header";
@@ -46,7 +47,10 @@ export default function Home() {
         </div>
       </div>
       <section className='page-padding flex flex-col items-start gap-8'>
-        <img className='h-8' src="/logo.svg" alt="Logo" />
+        <div className="flex w-full justify-between items-center">
+          <img className='w-16' src="/logo-campus.png" alt="Logo" />
+          <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
+        </div>
         <h1 className='text-blue '>Digitale campus</h1>
       </section>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
@@ -65,7 +69,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img src="/tour.png" className='w-full h-full aspect-video sm:aspect-square object-cover' alt="Slack" />
+              <img src="/tour.webp" className='w-full h-full aspect-video sm:aspect-square object-cover' alt="Slack" />
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -86,10 +90,9 @@ export default function Home() {
         </section>
         <section className='page-padding h-fit grid grid-cols-1 gap-4'>
           <p className='text-blue text-2xl'>Tools</p>
-          <div className="grid xl:grid-cols-2 gap-4">
-            <Tool title="Ga in gesprek met elkaar" cta="Open Tool" link="https://join.slack.com/t/campus-1ut1764/shared_invite/zt-24sble8pw-DVb_xfvxHAch_2z3IGhxOg" image="https://images.unsplash.com/photo-1587377838789-968194a7cc88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2358&q=80" />
-            <Tool reverse title="Ga in gesprek met elkaar" cta="Open Tool" link="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey" image="https://images.unsplash.com/photo-1587377838789-968194a7cc88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2358&q=80" />
-            <Tool title="Deel makkelijk documenten" cta="Open Tool" link={'https://wetransfer.com/'} image="https://images.unsplash.com/photo-1625834318071-f28f0e51449b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-1  gap-4">
+            <Tool title="Ga in gesprek met elkaar" cta="Naar chat" link="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey" image="/whatsapp.webp" />
+            <Tool reverse title="Deel makkelijk documenten" cta="Open WeTransfer" link={'https://wetransfer.com/'} image="/wetransfer.webp" />
           </div>
         </section>
       </div>

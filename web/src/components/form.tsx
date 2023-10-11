@@ -117,9 +117,9 @@ export function Form() {
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <select required name="space" id="space" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
                 <option value="" selected disabled hidden>Kies een ruimte</option>
-                <option value="Atelier">Atelier</option>
-                <option value="Landschapszaal">Landschapszaal</option>
-                <option value="Co-creatie">Co-creatie</option>
+                <option value="Atelier">Atelier - 20 personen</option>
+                <option value="Landschapszaal">Landschapszaal - 60 personen</option>
+                <option value="Co-creatie">Co-creatie - 40 personen</option>
             </select>
             <div className="w-full flex flex-col gap-2">
                 <p className="text-blue/75 flex flex-col gap-2">Datum</p>
@@ -139,26 +139,26 @@ export function Form() {
             <p className="text-blue/75 flex flex-col gap-2">Opties voor uw boeking</p>
             <div className="flex flex-wrap gap-x-8 gap-y-4">
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="lunch" className="text-lg text-blue">Lunch</label>
+                    <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
+                    <label htmlFor="lunch" className="text-lg text-blue cursor-pointer">Lunch</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="coffee" className="text-lg text-blue">Koffie & gebak</label>
+                    <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
+                    <label htmlFor="coffee" className="text-lg text-blue cursor-pointer">Koffie & gebak</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="cheers" className="text-lg text-blue">Borrel</label>
+                    <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
+                    <label htmlFor="cheers" className="text-lg text-blue cursor-pointer">Borrel</label>
                 </div>
                 <div className="flex items-center gap-2">
                     <input checked={isScreensChecked}
-                        onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="screens" className="text-lg text-blue">Schermen</label>
+                        onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="cursor-pointer w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="screens" className="text-lg text-blue cursor-pointer">Schermen</label>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ">
                     <input checked={isChairsChecked}
-                        onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="chairs" className="text-lg text-blue">Stoelen</label>
+                        onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="cursor-pointer w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="chairs" className="text-lg text-blue cursor-pointer">Stoelen</label>
                 </div>
             </div>
             {isScreensChecked ?
