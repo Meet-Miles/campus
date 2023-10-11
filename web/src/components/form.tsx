@@ -117,7 +117,6 @@ export function Form() {
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <label htmlFor="space" className="text-lg text-blue cursor-pointer">Ruimte</label>
             <select required name="space" id="space" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
-                <option value="" selected disabled hidden>Kies een ruimte</option>
                 <option value="Atelier">Atelier - 20 personen</option>
                 <option value="Landschapszaal">Landschapszaal - 60 personen</option>
                 <option value="Co-creatie">Co-creatie - 40 personen</option>
