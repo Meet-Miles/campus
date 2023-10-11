@@ -46,9 +46,9 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                 />
 
                 <Heading style={{ ...h1, textAlign: 'center' }}>We hebben uw aanvraag voor de ruimte &quot;{space}&quot; ontvangen.</Heading>
-                <Text style={{ ...h2, textAlign: 'center' }}>Zodra we .</Text>
-                <a href="https://timetouchedvillage.nl" style={{ textDecoration: 'none' }} target='_blank' rel='noreferrer'>
-                    <Text style={{ ...button, textAlign: 'center' }}>Play Again</Text>
+                <Text style={{ ...h2, textAlign: 'center' }}>Als deze ruimte beschikbaar is op {date} om {startTime}, zullen we een bevestiging sturen voor uw aanvraag.</Text>
+                <a href="https://campus-eight.vercel.app" style={{ textDecoration: 'none' }} target='_blank' rel='noreferrer'>
+                    <Text style={{ ...button, textAlign: 'center' }}>Maak nog een boeking</Text>
                 </a>
                 <Img
                     src={`${baseUrl}/favicon.png`}
@@ -94,15 +94,15 @@ const h1 = {
 };
 
 const button = {
-    color: '#0A431A',
+    color: '#FFFFFF',
     fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-    fontSize: '24px',
+    fontSize: '16px',
     fontWeight: 'bold',
     margin: '40px auto 40px auto',
     padding: '20px 20px',
-    borderRadius: '200px',
-    backgroundColor: "#2DE160",
+    borderRadius: '5px',
+    backgroundColor: "#2E3092",
     width: 'fit-content',
     textDecoration: "none"
 };

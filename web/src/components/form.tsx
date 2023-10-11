@@ -74,7 +74,6 @@ export function Form() {
         if (emailResponse.status === 200) {
             console.log('Email sent successfully:', emailResult);
             setLoading(false);
-
             setSubmitted(true);
         } else {
             console.error('Error sending email:', emailResult);
@@ -88,21 +87,24 @@ export function Form() {
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <select required name="space" id="space" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
                 <option value="" selected disabled hidden>Kies een ruimte</option>
-                <option value="volvo">Entree</option>
-                <option value="volvo">Ontmoetplein</option>
-                <option value="atelier">Atelier</option>
-                <option value="landschapszaal">Landschapszaal</option>
-                <option value="cocreatie">Co-creatie</option>
+                <option value="Entree">Entree</option>
+                <option value="Volgo">Ontmoetplein</option>
+                <option value="Atelier">Atelier</option>
+                <option value="Landschapszaal">Landschapszaal</option>
+                <option value="Co-creatie">Co-creatie</option>
             </select>
-            <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+            <div className="w-full flex flex-col gap-2">
+                <p className="text-blue/75 flex flex-col gap-2">Datum</p>
+                <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+            </div>
             <div className="flex w-full justify-between gap-4">
                 <div className="w-full flex flex-col gap-2">
                     <p className="text-blue/75 flex flex-col gap-2">Start tijd</p>
-                    <input required type="time" step={1800} id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
                 <div className="w-full flex flex-col gap-2">
                     <p className="text-blue/75 ">Eind tijd</p>
-                    <input required type="time" step={1800} id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
             </div>
             <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
