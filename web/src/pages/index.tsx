@@ -1,6 +1,5 @@
 import { Button } from "@/components/button";
 import { Footer } from "@/components/footer";
-import { Form } from "@/components/form";
 import { Header } from "@/components/header";
 import { Space } from "@/components/space";
 import { Tool } from "@/components/tool";
@@ -32,7 +31,7 @@ export default function Home() {
       </Head>
       <Header />
       {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
-      <div className={`bg-white h-[85dvh] overflow-y-scroll sm:h-screen fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black duration-700 transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
+      {/* <div className={`bg-white h-[85dvh] overflow-y-scroll sm:h-screen fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black duration-700 transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
         <div className="bg-blue w-full h-[20px] sticky top-0"></div>
         <div className="p-4 flex flex-col gap-4 max-w-4xl m-auto">
           <div className="w-full flex justify-between items-center ">
@@ -43,7 +42,7 @@ export default function Home() {
           </div>
           <Form />
         </div>
-      </div>
+      </div> */}
       <section className='page-padding flex flex-col items-start gap-8'>
         <div className="flex w-full justify-between items-center">
           <img className='w-16 h-auto' src="/logo-campus.png" alt="Logo" />
