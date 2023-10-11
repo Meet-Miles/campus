@@ -1,7 +1,9 @@
 import { Footer } from "@/components/footer";
+import { Form } from "@/components/form";
 import { Header } from "@/components/header";
 import { Space } from "@/components/space";
 import { Tool } from "@/components/tool";
+import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,6 +14,10 @@ export default function Home() {
     <div
       className={`flex flex-col justify-between min-h-screen`}
     >
+      <Head>
+        <title>Digitale Campus</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header />
       {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
       <div className={`bg-white h-[100svh] sm:h-auto fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
@@ -22,31 +28,7 @@ export default function Home() {
               setOpen(!open)
             }} src="/close.svg" className="w-10 h-10 cursor-pointer" alt="" />
           </div>
-          <form className='flex flex-col gap-4'>
-            <select name="spaces" id="spaces" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
-              <option value="" selected disabled hidden>Kies een ruimte</option>
-              <option value="volvo">Entree</option>
-              <option value="volvo">Ontmoetplein</option>
-              <option value="atelier">Atelier</option>
-              <option value="landschapszaal">Landschapszaal</option>
-              <option value="cocreatie">Co-creatie</option>
-            </select>
-            <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <div className="flex w-full justify-between gap-4">
-              <div className="w-full flex flex-col gap-2">
-                <p className="text-blue/75 flex flex-col gap-2">Start tijd</p>
-                <input required type="time" step={1800} id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-              </div>
-              <div className="w-full flex flex-col gap-2">
-                <p className="text-blue/75 ">Eind tijd</p>
-                <input required type="time" step={1800} id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-              </div>
-            </div>
-            <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input required type="text" id="email" name="email" placeholder="E-mail" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input type="submit" className="bg-blue hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer" value={'Verstuur aanvraag'} />
-          </form>
+          <Form />
         </div>
       </div>
       <section className='page-padding flex flex-col items-start gap-8'>
