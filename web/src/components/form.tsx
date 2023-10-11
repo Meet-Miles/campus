@@ -108,9 +108,7 @@ export function Form() {
             <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="email" name="email" placeholder="E-mail" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input type="submit" className="bg-blue hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer" value={'Verstuur aanvraag'} />
-            {isLoading && <p className="text-blue/75 text-xl max-w-4xl text-center">Versturen...</p>}
-            {isSubmitted && <p className="text-green text-xl max-w-4xl text-center">Aanvraag verstuurd!</p>}
+            <input type="submit" className={`${isLoading ? `bg-blue opacity-50` : isSubmitted ? `bg-green opacity-100` : `bg-blue opacity-100`} hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer`} value={isLoading ? `Versturen...` : isSubmitted ? `Aanvraag verstuurd!` : `Verstuur aanvraag`} />
         </form>
 
 
