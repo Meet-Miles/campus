@@ -34,6 +34,10 @@ select {
     appearance: none;
 }
 
+input {
+    -webkit-appearance: none;
+}
+
 input[type="date"],
 input[type="time"] {
     -webkit-appearance: none;
