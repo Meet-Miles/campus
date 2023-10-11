@@ -6,7 +6,7 @@ export function Space({ title, people, available }: { title: string, people: str
             </div>
             <div className="flex flex-col items-start">
                 <p className='text-blue'>{title}</p>
-                <p className="text-blue/50 text-xs">{people} personen</p>
+                <p className="text-blue text-xs">{people} personen</p>
             </div>
             <div className='flex items-center gap-1 mr-4'>
                 <img src={available ? `/available.svg` : `/not-available.svg`} alt={available ? `Available` : `Not available`} className="w-4 h-4" />

@@ -31,6 +31,7 @@ export default function Home() {
       <Head>
         <title>Digitale Campus</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Digitale campus" />
       </Head>
       <Header />
       {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
@@ -56,10 +57,10 @@ export default function Home() {
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding grid grid-cols-1 gap-4'>
           <div className="grid grid-cols-1 sm:grid-cols-2 ">
-            <div className="p-4 bg-lightBlue text-white flex flex-col gap-4 justify-between h-full">
+            <div className="p-4 bg-blue text-white flex flex-col gap-4 justify-between h-full">
               <p className="text-sm font-serif">Nieuws</p>
               <div className="flex flex-col gap-4">
-                <p className="text-xl md:text-2xl lg:text-3xl">Doe de digitale tour door de campus</p>
+                <p className="text-2xl lg:text-3xl">Doe de digitale tour door de campus</p>
                 <p className="font-serif">In samenwerking met een van de SiR alumni</p>
               </div>
               <div className="flex gap-2">
