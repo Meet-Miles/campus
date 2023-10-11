@@ -1,6 +1,8 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import localFont from 'next/font/local'
+import '@/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import type { AppProps } from 'next/app';
+import localFont from 'next/font/local';
+
 const karbon = localFont({
   src: [
     {
@@ -23,5 +25,5 @@ const swift = localFont({
   variable: '--font-swift'
 })
 export default function App({ Component, pageProps }: AppProps) {
-  return <main className={`${karbon.variable} ${swift.variable}`}><Component {...pageProps} /></main>
+  return <main className={`${karbon.variable} ${swift.variable}`}><Component {...pageProps} /><Analytics /></main>
 }
