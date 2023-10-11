@@ -59,7 +59,7 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
         <Body style={main}>
             <Container style={container}>
                 <Img
-                    src={`${baseUrl}/logo.png`}
+                    src={`${baseUrl}/logo-campus.png`}
                     width="40%"
                     alt="Logo for Campus"
                 />
@@ -83,9 +83,8 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                     <Text style={{ ...button, textAlign: 'center' }}>Maak nog een boeking</Text>
                 </a>
                 <Img
-                    src={`${baseUrl}/favicon.png`}
+                    src={`${baseUrl}/logo-campus.png`}
                     width="32"
-                    height="32"
                     alt="Campus Logo"
                 />
                 <Text style={{ ...footer, textAlign: 'left' }}>
