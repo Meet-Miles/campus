@@ -14,12 +14,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             text: `Bedankt voor het sturen van je aanvraag!`,
             react: EmailTemplateUser({
                 space: body.space,
+                amount: body.amount,
                 date: body.date,
                 startTime: body.startTime,
                 endTime: body.endTime,
                 name: body.name,
                 email: body.email,
                 organisation: body.organisation,
+
+                lunch: body.lunch,
+                coffee: body.coffee,
+                cheers: body.cheers,
+                screens: body.screens,
+                chairs: body.chairs,
             }),
         })
         res.status(200).json(data)

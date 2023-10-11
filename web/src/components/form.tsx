@@ -20,6 +20,12 @@ export function Form() {
             name: event.target.name.value,
             email: event.target.email.value,
             organisation: event.target.organisation.value,
+            // options
+            lunch: event.target.lunch.checked,
+            coffee: event.target.coffee.checked,
+            cheers: event.target.cheers.checked,
+            screens: event.target.screens.checked,
+            chairs: event.target.chairs.checked,
         }
 
         // Send the data to the server in JSON format.
@@ -64,6 +70,13 @@ export function Form() {
                 name: data.name,
                 email: data.email,
                 organisation: data.organisation,
+                // options
+                lunch: data.lunch,
+                coffee: data.coffee,
+                cheers: data.cheers,
+                screens: data.screens,
+                chairs: data.chairs,
+
             }) // modify this according to your need
         }
 
@@ -105,6 +118,31 @@ export function Form() {
                     <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
             </div>
+            <input required type="number" id="amount" name="amount" placeholder="Aantal personen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+            <p className="text-blue/75 flex flex-col gap-2">Opties voor uw boeking</p>
+            <div className="flex flex-wrap gap-x-8 gap-y-4">
+                <div className="flex items-center gap-2">
+                    <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="lunch" className="text-lg text-blue">Lunch</label>
+                </div>
+                <div className="flex items-center gap-2">
+                    <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="coffee" className="text-lg text-blue">Koffie & gebak</label>
+                </div>
+                <div className="flex items-center gap-2">
+                    <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="cheers" className="text-lg text-blue">Borrel</label>
+                </div>
+                <div className="flex items-center gap-2">
+                    <input type="checkbox" id="screens" name="screens" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="screens" className="text-lg text-blue">Schermen</label>
+                </div>
+                <div className="flex items-center gap-2">
+                    <input type="checkbox" id="chairs" name="chairs" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <label htmlFor="chairs" className="text-lg text-blue">Stoelen</label>
+                </div>
+            </div>
+            <p className="text-blue/75 flex flex-col gap-2">Uw gegevens</p>
             <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="email" name="email" placeholder="E-mail" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />

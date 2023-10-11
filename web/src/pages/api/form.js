@@ -12,6 +12,6 @@ export default function handler(req, res) {
     // Found the name.
     // Sends a HTTP success code
     res.status(200).json({
-        data: `${body.space} ${body.date} ${body.startTime} ${body.endTime} ${body.name} ${body.email} ${body.organisation}`,
+        data: `${body.space} ${body.date} ${body.startTime} ${body.endTime} ${body.name} ${body.email} ${body.organisation} ${body.lunch} ${body.coffee} ${body.cheers} ${body.screens} ${body.chairs}`,
     })
 }
