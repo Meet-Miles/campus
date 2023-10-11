@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import localFont from 'next/font/local';
 
@@ -27,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${karbon.variable} ${swift.variable}`}>
       <Component {...pageProps} />
-      {/* <Analytics /> */}
+      <Analytics />
     </main>
   )
 }
