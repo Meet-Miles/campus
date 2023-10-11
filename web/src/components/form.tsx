@@ -7,6 +7,10 @@ export function Form() {
     const [isScreensChecked, setIsScreensChecked] = useState(false);
     const [isChairsChecked, setIsChairsChecked] = useState(false);
 
+    const generateID = () => {
+        const randomString = Math.random().toString(36).substring(2, 8); // Generates a 6-character long string.
+        return `#czh-${randomString}`;
+    }
 
     // Handles the submit event on form submit.
     const handleSubmit = async (event: any) => {
@@ -14,11 +18,6 @@ export function Form() {
         // Stop the form from submitting and refreshing the page.
         event.preventDefault()
         setLoading(true);
-
-        const generateID = () => {
-            const randomString = Math.random().toString(36).substring(2, 8); // Generates a 6-character long string.
-            return `#czh-${randomString}`;
-        }
 
         // Get data from the form.
         const data = {

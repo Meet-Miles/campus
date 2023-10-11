@@ -12,15 +12,12 @@ export default function Home() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    // Cleanup function to reset overflow on component unmount
-    return () => {
-      document.body.style.overflow = 'auto';
+    if (typeof window !== 'undefined') {
+      document.body.style.overflow = open ? 'hidden' : 'auto';
+      // Cleanup
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
     }
   }, [open]);
 
