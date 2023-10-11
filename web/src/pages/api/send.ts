@@ -10,7 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         const data = await resend.emails.send({
             from: "Campus Zuid-Holland <dev@wearemiles.nl>",
             to: [body.email],
-            subject: "We hebben je aanvraag ontvangen!",
+            subject: `${body.id} - We hebben je aanvraag ontvangen!`,
             text: `Bedankt voor het sturen van je aanvraag!`,
             react: EmailTemplateUser({
                 space: body.space,
@@ -21,12 +21,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 name: body.name,
                 email: body.email,
                 organisation: body.organisation,
+                notes: body.notes,
 
                 lunch: body.lunch,
                 coffee: body.coffee,
                 cheers: body.cheers,
                 screens: body.screens,
                 chairs: body.chairs,
+                chairsAmount: body.chairsAmount,
+                screensAmount: body.screensAmount,
+                id: body.id,
+                // generate ID and send with email #czh-123456
             }),
         })
         res.status(200).json(data)
@@ -34,3 +39,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         res.status(400).json(error)
     }
 }
+
+// email to host, add button with mailtoL ... to accept booking and send email to user

@@ -21,11 +21,15 @@ interface EmailTemplateProps {
     name: string,
     email: string,
     organisation: string,
+    notes: string,
     lunch: boolean,
     coffee: boolean,
     cheers: boolean,
     screens: boolean,
     chairs: boolean,
+    chairsAmount: string,
+    screensAmount: string,
+    id: string
 }
 
 const baseUrl = "https://campus-eight.vercel.app"
@@ -39,15 +43,19 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
     name,
     email,
     organisation,
+    notes,
     lunch,
     coffee,
     cheers,
     screens,
     chairs,
+    chairsAmount,
+    screensAmount,
+    id
 }) => (
     <Html>
         <Head />
-        <Preview>Bedankt voor je aanvraag!</Preview>
+        <Preview>{id} - Bedankt voor je aanvraag!</Preview>
         <Body style={main}>
             <Container style={container}>
                 <Img
@@ -59,16 +67,18 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                 <Heading style={{ ...h1, textAlign: 'left' }}>We hebben uw aanvraag voor de ruimte <span style={{ color: "#2E3092" }}>{space}</span> ontvangen.</Heading>
                 <Text style={{ ...h2, textAlign: 'left' }}>Als deze ruimte beschikbaar is op <span style={{ color: "#2E3092" }}>{date}</span> van <span style={{ color: "#2E3092" }}>{startTime}</span> tot <span style={{ color: "#2E3092" }}>{endTime}</span>, zullen we een bevestiging sturen voor uw aanvraag.</Text>
                 <Text style={{ ...h2, textAlign: 'left', color: "#2E3092" }}>Details van uw boeking</Text>
+                <Text style={{ ...h2, textAlign: 'left', color: "#2E3092" }}>{id}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Ruimte: {space}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Aantal personen: {amount}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Naam: {name}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>E-mail: {email}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Organisatie: {organisation}</Text>
+                <Text style={{ ...text, textAlign: 'left' }}>Opmerkingen: {notes}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Lunch: {lunch ? "Ja" : "Nee"}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Koffie & gebak: {coffee ? "Ja" : "Nee"}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Borrel: {cheers ? "Ja" : "Nee"}</Text>
-                <Text style={{ ...text, textAlign: 'left' }}>Schermen: {screens ? "Ja" : "Nee"}</Text>
-                <Text style={{ ...text, textAlign: 'left' }}>Stoelen: {chairs ? "Ja" : "Nee"}</Text>
+                {screens ? <Text style={{ ...text, textAlign: 'left' }}>Schermen: Ja, {screensAmount}</Text> : null}
+                {chairs ? <Text style={{ ...text, textAlign: 'left' }}>Stoelen: Ja, {chairsAmount}</Text> : null}
                 <a href="https://campus-eight.vercel.app" style={{ textDecoration: 'none' }} target='_blank' rel='noreferrer'>
                     <Text style={{ ...button, textAlign: 'center' }}>Maak nog een boeking</Text>
                 </a>
@@ -79,15 +89,15 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
                     alt="Campus Logo"
                 />
                 <Text style={{ ...footer, textAlign: 'left' }}>
+                    Voor vragen, opmerkingen of annuleren van uw boeking kunt u contact opnemen met de host via
+                    <br />
                     <Link
-                        href="https://campus-eight.vercel.app/"
+                        href={`mailto:campus@pzh.nl`}
                         target="_blank"
                         style={{ ...link, color: '#370731' }}
                     >
-                        campus.pzh.nl
+                        campus@pzh.nl
                     </Link>
-                    <br />
-                    Blijf cocreëren op de digitale campus
                 </Text>
             </Container>
         </Body>

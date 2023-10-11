@@ -4,6 +4,10 @@ export function Form() {
     const [isLoading, setLoading] = useState(false);
     const [isSubmitted, setSubmitted] = useState(false);
 
+    const [isScreensChecked, setIsScreensChecked] = useState(false);
+    const [isChairsChecked, setIsChairsChecked] = useState(false);
+
+
     // Handles the submit event on form submit.
     const handleSubmit = async (event: any) => {
 
@@ -11,21 +15,31 @@ export function Form() {
         event.preventDefault()
         setLoading(true);
 
+        const generateID = () => {
+            const randomString = Math.random().toString(36).substring(2, 8); // Generates a 6-character long string.
+            return `#czh-${randomString}`;
+        }
+
         // Get data from the form.
         const data = {
             space: event.target.space.value,
+            amount: event.target.amount.value,
             date: event.target.date.value,
             startTime: event.target.startTime.value,
             endTime: event.target.endTime.value,
             name: event.target.name.value,
             email: event.target.email.value,
             organisation: event.target.organisation.value,
+            notes: event.target.notes.value,
             // options
             lunch: event.target.lunch.checked,
             coffee: event.target.coffee.checked,
             cheers: event.target.cheers.checked,
             screens: event.target.screens.checked,
             chairs: event.target.chairs.checked,
+            screensAmount: event.target.screensAmount?.value || 0,
+            chairsAmount: event.target.chairsAmount?.value || 0,
+            id: generateID(),
         }
 
         // Send the data to the server in JSON format.
@@ -64,19 +78,22 @@ export function Form() {
             },
             body: JSON.stringify({
                 space: data.space,
+                amount: data.amount,
                 date: data.date,
                 startTime: data.startTime,
                 endTime: data.endTime,
                 name: data.name,
                 email: data.email,
                 organisation: data.organisation,
-                // options
+                notes: data.notes,
                 lunch: data.lunch,
                 coffee: data.coffee,
                 cheers: data.cheers,
                 screens: data.screens,
                 chairs: data.chairs,
-
+                screensAmount: data.screensAmount,
+                chairsAmount: data.chairsAmount,
+                id: data.id
             }) // modify this according to your need
         }
 
@@ -118,7 +135,7 @@ export function Form() {
                     <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
                 </div>
             </div>
-            <input required type="number" id="amount" name="amount" placeholder="Aantal personen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+            <input required type="number" max={60} id="amount" name="amount" placeholder="Aantal personen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <p className="text-blue/75 flex flex-col gap-2">Opties voor uw boeking</p>
             <div className="flex flex-wrap gap-x-8 gap-y-4">
                 <div className="flex items-center gap-2">
@@ -134,22 +151,30 @@ export function Form() {
                     <label htmlFor="cheers" className="text-lg text-blue">Borrel</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="screens" name="screens" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <input checked={isScreensChecked}
+                        onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="w-5 h-5 bg-black/10 checked:bg-blue " />
                     <label htmlFor="screens" className="text-lg text-blue">Schermen</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="chairs" name="chairs" className="w-5 h-5 bg-black/10 checked:bg-blue " />
+                    <input checked={isChairsChecked}
+                        onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="w-5 h-5 bg-black/10 checked:bg-blue " />
                     <label htmlFor="chairs" className="text-lg text-blue">Stoelen</label>
                 </div>
             </div>
+            {isScreensChecked ?
+                <input required type="number" max={60} id="screensAmount" name="screensAmount" placeholder="Aantal schermen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                : null
+            }
+            {isChairsChecked ?
+                <input required type="number" max={60} id="chairsAmount" name="chairsAmount" placeholder="Aantal stoelen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                : null
+            }
             <p className="text-blue/75 flex flex-col gap-2">Uw gegevens</p>
             <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="email" name="email" placeholder="E-mail" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+            <textarea name="notes" id="notes" placeholder="Opmerkingen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
             <input type="submit" className={`${isLoading ? `bg-blue opacity-50` : isSubmitted ? `bg-green opacity-100` : `bg-blue opacity-100`} hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer`} value={isLoading ? `Versturen...` : isSubmitted ? `Aanvraag verstuurd!` : `Verstuur aanvraag`} />
         </form>
-
-
-
     )
 }
