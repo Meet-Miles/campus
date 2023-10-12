@@ -74,7 +74,7 @@ export default function Home() {
             <p className='text-blue text-2xl'>Ruimtes</p>
             <div className='flex flex-col gap-4'>
               <Space title="Entree" people="2 - 12" available />
-              <Space title="Ontmoetplein" people="2 - 12" available />
+              <Space title="Ontmoetingsplein" people="2 - 12" available />
               <Space title="Atelier" people="2 - 12" available={false} />
               <Space title="Landschapszaal" people="2 - 12" available={false} />
               <Space title="Co-creatie" people="2 - 12" available />

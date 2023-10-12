@@ -11,7 +11,7 @@ export default function Dashboard() {
                 <img className='w-24 h-auto object-contain' src="/logo-campus-partly.png" alt="Logo" />
                 <div className="flex flex-col items-end">
                     <h1 className='text-blue text-2xl'>Welkom op de Campus Zuid-Holland</h1>
-                    <p className="text-blue font-serif">{currentDay}</p>
+                    <p className="text-blue font-serif">{currentDay} 13 oktober 2023</p>
                 </div>
             </section>
             <div className='grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr]'>
