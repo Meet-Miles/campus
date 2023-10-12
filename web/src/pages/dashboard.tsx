@@ -18,6 +18,8 @@ export default function Dashboard() {
                 <section className='page-padding flex flex-col gap-4'>
                     <p className='text-blue text-3xl'>Dagprogramma</p>
                     <div className='flex flex-col gap-4'>
+                        <Space title="Geen afspraken" time="Beschikbaar" secondaryDescription="Entree" available={false} />
+                        <Space title="Bijpraat lunch Campus" time="12:00 - 13:00" secondaryDescription="Ontmoetingsplein" available={false} />
                         <Space title="Teamoverleg ruimtelijke puzzel" time="Nu bezig" secondaryDescription="Atelier" available={false} />
                         <Space title="Startup your day right - koffiemoment" time="9:30 - 10:00" secondaryDescription="Landschapszaal" available={false} />
                         <Space title="Workshop digitalisatie" time="13:30 - 14:30" secondaryDescription="Co-creatie" available />
