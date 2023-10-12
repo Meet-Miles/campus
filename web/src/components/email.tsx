@@ -59,15 +59,14 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
         <Body style={main}>
             <Container style={container}>
                 <Img
-                    src={`${baseUrl}/logo-campus.png`}
+                    src={`${baseUrl}/logo-campus-partly.png`}
                     width="40%"
                     alt="Logo for Campus"
                 />
 
-                <Heading style={{ ...h1, textAlign: 'left' }}>We hebben uw aanvraag voor de ruimte <span style={{ color: "#2E3092" }}>{space}</span> ontvangen.</Heading>
+                <Heading style={{ ...h1, textAlign: 'left' }}>We hebben uw aanvraag voor de ruimte <span style={{ color: "#2E3092" }}>{space}</span> ontvangen met referentie nummer <span style={{ color: "#2E3092" }}>{id}</span>.</Heading>
                 <Text style={{ ...h2, textAlign: 'left' }}>Als deze ruimte beschikbaar is op <span style={{ color: "#2E3092" }}>{date}</span> van <span style={{ color: "#2E3092" }}>{startTime}</span> tot <span style={{ color: "#2E3092" }}>{endTime}</span>, zullen we een bevestiging sturen voor uw aanvraag.</Text>
                 <Text style={{ ...h2, textAlign: 'left', color: "#2E3092" }}>Details van uw boeking</Text>
-                <Text style={{ ...h2, textAlign: 'left', color: "#2E3092" }}>{id}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Ruimte: {space}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Aantal personen: {amount}</Text>
                 <Text style={{ ...text, textAlign: 'left' }}>Naam: {name}</Text>

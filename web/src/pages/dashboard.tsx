@@ -8,15 +8,14 @@ export default function Dashboard() {
             className={`flex flex-col justify-between min-h-screen`}
         >
             <section className='page-padding flex justify-between items-center gap-8'>
-                <img className='h-16' src="/logo.svg" alt="Logo" />
+                <img className='w-24 h-auto object-contain' src="/logo-campus-partly.png" alt="Logo" />
                 <div className="flex flex-col items-end">
-                    <h1 className='text-blue text-2xl'>Digitale campus</h1>
+                    <h1 className='text-blue text-2xl'>Welkom op de Campus Zuid-Holland</h1>
                     <p className="text-blue font-serif">{currentDay}</p>
                 </div>
             </section>
             <div className='grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr]'>
                 <section className='page-padding flex flex-col gap-4'>
-
                     <p className='text-blue text-2xl'>Dagprogramma</p>
                     <div className='flex flex-col gap-4'>
                         <Space title="Entree" people="2 - 12" available />
@@ -34,7 +33,6 @@ export default function Dashboard() {
                                     <img src="/qr.svg" className="w-16 h-16" alt="" />
                                 </div>
                             </div>
-
                         </div>
                         <div className="bg-blue">
                             <img src="/phone.png" className='w-full h-full object-contain' alt="Slack" />
@@ -46,8 +44,9 @@ export default function Dashboard() {
                         <div className="p-4 bg-green text-white flex flex-col gap-4 justify-between h-full">
                             <p className="text-2xl font-serif">Nieuws</p>
                             <div className="flex flex-col gap-4">
-                                <p className="text-4xl">Doe de digitale tour door de campus</p>
-                                <p className="font-serif text-2xl">In samenwerking met een van de SiR alumni</p>
+                                <p className="font-serif text-2xl">16 November 2023</p>
+                                <p className="text-4xl">Workshop door Marianne Verbij</p>
+                                <p className="font-serif text-2xl">Verbeter co-creatie tussen de maatschappij en de overheid</p>
                             </div>
                             <div className="flex gap-2">
                                 <div className="h-[3px] bg-white w-8"></div>

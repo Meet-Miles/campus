@@ -46,7 +46,7 @@ export default function Home() {
       </div>
       <section className='page-padding flex flex-col items-start gap-8'>
         <div className="flex w-full justify-between items-center">
-          <img className='w-16 h-auto' src="/logo-campus.png" alt="Logo" />
+          <img className='w-24 h-auto' src="/logo-campus-partly.png" alt="Logo" />
           <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
         </div>
         <h1 className='text-blue '>Digitale campus</h1>

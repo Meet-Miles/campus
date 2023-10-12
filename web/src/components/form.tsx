@@ -8,9 +8,9 @@ export function Form() {
     const [isChairsChecked, setIsChairsChecked] = useState(false);
 
     const generateID = () => {
-        const randomString = Math.random().toString(36).substring(2, 8); // Generates a 6-character long string.
-        return `#czh-${randomString}`;
-    }
+        const randomNumber = Math.floor(Math.random() * 1000000); // Generates a random number between 0 and 999999.
+        return `#czh-${randomNumber}`;
+    };
 
     // Handles the submit event on form submit.
     const handleSubmit = async (event: any) => {
