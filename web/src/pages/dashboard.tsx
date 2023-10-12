@@ -35,7 +35,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                         <div className="bg-blue">
-                            <img src="/phone.png" className='w-full h-full object-bottom object-contain' alt="Slack" />
+                            <img src="/phone.webp" className='w-full h-full object-bottom object-contain' alt="Slack" />
                         </div>
                     </div>
                 </section>
