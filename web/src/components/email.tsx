@@ -60,7 +60,7 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({
             <Container style={container}>
                 <Img
                     src={`${baseUrl}/logo-campus-partly.png`}
-                    width="40%"
+                    width="35%"
                     alt="Logo for Campus"
                 />
 

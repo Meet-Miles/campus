@@ -104,6 +104,12 @@ export function Form() {
             console.log('Email sent successfully:', emailResult);
             setLoading(false);
             setSubmitted(true);
+
+            // Reset to default state after 5 seconds
+            setTimeout(() => {
+                setSubmitted(false);
+            }, 5000);
+
         } else {
             console.error('Error sending email:', emailResult);
             setLoading(false);

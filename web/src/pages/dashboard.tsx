@@ -16,13 +16,13 @@ export default function Dashboard() {
             </section>
             <div className='grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr]'>
                 <section className='page-padding flex flex-col gap-4'>
-                    <p className='text-blue text-2xl'>Dagprogramma</p>
+                    <p className='text-blue text-3xl'>Dagprogramma</p>
                     <div className='flex flex-col gap-4'>
                         <Space title="Teamoverleg ruimtelijke puzzel" time="Nu bezig" secondaryDescription="Atelier" available={false} />
                         <Space title="Startup your day right - koffiemoment" time="9:30 - 10:00" secondaryDescription="Landschapszaal" available={false} />
                         <Space title="Workshop digitalisatie" time="13:30 - 14:30" secondaryDescription="Co-creatie" available />
                     </div>
-                    <div className="grid grid-cols-2 ">
+                    <div className="grid grid-cols-2 h-full">
                         <div className="p-4 bg-blue text-white flex flex-col gap-4 justify-center h-full">
                             <div className="flex flex-col gap-4">
                                 <p className="text-4xl">Iets vergeten te bespreken?</p>
@@ -33,7 +33,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                         <div className="bg-blue">
-                            <img src="/phone.png" className='w-full h-full object-contain' alt="Slack" />
+                            <img src="/phone.png" className='w-full h-full object-bottom object-contain' alt="Slack" />
                         </div>
                     </div>
                 </section>
