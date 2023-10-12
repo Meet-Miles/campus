@@ -54,16 +54,16 @@ export default function Home() {
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding grid grid-cols-1 gap-4'>
           <div className="grid grid-cols-1 sm:grid-cols-2 ">
-            <div className="p-4 bg-blue text-white flex flex-col gap-4 justify-between h-full">
+            <div className="p-4 bg-lightBlue text-blue flex flex-col gap-4 justify-between h-full">
               <p className="text-sm font-serif">Nieuws</p>
               <div className="flex flex-col gap-4">
                 <p className="text-2xl lg:text-3xl">Doe de digitale tour door de campus</p>
                 <p className="font-serif">In samenwerking met een van de SiR alumni</p>
               </div>
               <div className="flex gap-2">
-                <div className="h-[3px] bg-white w-8"></div>
-                <div className="h-[3px] bg-white/50 w-8"></div>
-                <div className="h-[3px] bg-white/50 w-8"></div>
+                <div className="h-[3px] bg-blue w-8"></div>
+                <div className="h-[3px] bg-blue/25 w-8"></div>
+                <div className="h-[3px] bg-blue/25 w-8"></div>
               </div>
             </div>
             <div>
