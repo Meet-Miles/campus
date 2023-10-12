@@ -16,7 +16,7 @@ export default function Dashboard() {
             </section>
             <div className='grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr]'>
                 <section className='page-padding flex flex-col gap-4'>
-                    <p className='text-blue text-3xl'>Dagprogramma</p>
+                    <p className='text-blue text-4xl mb-4'>Dagprogramma</p>
                     <div className='flex flex-col gap-4'>
                         <Space title="Geen afspraken" time="Beschikbaar" secondaryDescription="Entree" available={false} />
                         <Space title="Bijpraat lunch Campus" time="12:00 - 13:00" secondaryDescription="Ontmoetingsplein" available={false} />
