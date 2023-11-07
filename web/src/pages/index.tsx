@@ -26,9 +26,9 @@ export default function Home() {
       className={`flex flex-col justify-between min-h-screen`}
     >
       <Head>
-        <title>Digitale Campus</title>
+        <title>Campus Zuid-Holland</title>
         <link rel="icon" href="/favicon.png" />
-        <meta name="description" content="Digitale campus" />
+        <meta name="description" content="Campus Zuid-Holland" />
       </Head>
       <Header />
       {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
@@ -46,10 +46,10 @@ export default function Home() {
       </div>
       <section className='page-padding flex flex-col items-start gap-8'>
         <div className="flex w-full justify-between items-center">
-          <img className='w-24 h-auto' src="/logo-campus-partly.png" alt="Logo" />
+          <img className='w-16 h-auto' src="/logo-campus-partly.png" alt="Logo" />
           <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
         </div>
-        <h1 className='text-blue '>Digitale campus</h1>
+        <h1 className='text-blue '>Welkom op de Campus Zuid-Holland</h1>
       </section>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding grid grid-cols-1 gap-4'>
