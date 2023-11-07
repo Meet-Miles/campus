@@ -21,6 +21,47 @@ export default function Home() {
     }
   }, [open]);
 
+  const slides = [
+    {
+      text: "Doe de digitale tour door de campus",
+      subText: "In samenwerking met een van de SiR alumni",
+      imgSrc: "/tour.webp",
+      bgColor: 'bg-lightBlue',
+      textColor: "text-blue",
+      bgTop: 'bg-blue'
+    },
+    {
+      text: "Workshop door Marianne Verbij",
+      subText: "Verbeter co-creatie tussen de maatschappij en de overheid",
+      imgSrc: "/workshop.png",
+      bgColor: 'bg-green',
+      textColor: "text-white",
+      bgTop: 'bg-white'
+    },
+    {
+      text: "Campus gaat verhuizen",
+      subText: "De locatie gaat veranderen. Binnenkort meer!",
+      imgSrc: "/move.png",
+      bgColor: 'bg-yellow',
+      textColor: "text-blue",
+      bgTop: "bg-blue",
+    }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Effect hook to change slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+
   return (
     <div
       className={`flex flex-col justify-between min-h-screen`}
@@ -54,20 +95,23 @@ export default function Home() {
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding grid grid-cols-1 gap-4'>
           <div className="grid grid-cols-1 sm:grid-cols-2 ">
-            <div className="p-4 bg-lightBlue text-blue flex flex-col gap-4 justify-between h-full">
+            <div className={`p-4 ${slides[currentSlide].bgColor} ${slides[currentSlide].textColor} flex flex-col gap-4 justify-between h-full`}>
               <p className="text-sm font-serif">Nieuws</p>
               <div className="flex flex-col gap-4">
-                <p className="text-2xl lg:text-3xl">Doe de digitale tour door de campus</p>
-                <p className="font-serif">In samenwerking met een van de SiR alumni</p>
+                <p className="text-2xl lg:text-3xl">{slides[currentSlide].text}</p>
+                <p className="font-serif">{slides[currentSlide].subText}</p>
               </div>
               <div className="flex gap-2">
-                <div className="h-[3px] bg-blue w-8"></div>
-                <div className="h-[3px] bg-blue/25 w-8"></div>
-                <div className="h-[3px] bg-blue/25 w-8"></div>
+                {slides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`h-[3px] ${index === currentSlide ? slides[currentSlide].bgTop : `${slides[currentSlide].bgTop}/25`} w-8`}
+                  ></div>
+                ))}
               </div>
             </div>
             <div>
-              <img src="/tour.webp" className='w-full h-full aspect-video sm:aspect-square object-cover' alt="Slack" />
+              <img src={slides[currentSlide].imgSrc} className='w-full h-full aspect-video sm:aspect-square object-cover' alt="Slide Image" />
             </div>
           </div>
           <div className="flex flex-col gap-4">
