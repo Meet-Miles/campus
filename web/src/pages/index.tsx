@@ -107,13 +107,13 @@ export default function Home() {
                 {slides.map((slide, index) => (
                   <div
                     key={index}
-                    className={`h-[3px] ${index === currentSlide ? slides[currentSlide].bgTop : `${slides[currentSlide].bgTop}/25`} w-8`}
+                    className={`h-[3px] ${index === currentSlide ? slides[currentSlide].bgTop : `${slides[currentSlide].bgTop} opacity-20`} w-8`}
                   ></div>
                 ))}
               </div>
             </div>
             <div>
-              <img src={slides[currentSlide].imgSrc} className='w-full h-full aspect-video sm:aspect-square object-cover' alt="Slide Image" />
+              <img src={slides[currentSlide].imgSrc} className='w-full h-full aspect-video sm:aspect-square object-cover object-center' alt="Slide Image" />
             </div>
           </div>
           <div className="flex flex-col gap-4">
