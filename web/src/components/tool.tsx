@@ -2,7 +2,7 @@ export function Tool({ title, cta, image, reverse, link }: { link: string, title
 
     return (
         <a href={link} target="_blank" rel="noreferrer">
-            <div className='bg-grey hover:scale-105 active:scale-100 active:brightness-90 transition-all cursor-pointer grid grid-cols-2 text-blue'>
+            <div className='bg-grey rounded-[4px] overflow-hidden hover:scale-105 active:scale-100 active:brightness-90 transition-all cursor-pointer grid grid-cols-2 text-darkBlue'>
                 <div className={`${reverse ? `order-1` : ` order-0`} flex flex-col h-full justify-between items-start p-4`}>
                     <p className='text-xl'>{title}</p>
                     <p className='text-sm font-serif'>{cta}</p>

@@ -10,13 +10,13 @@ export default function Dashboard() {
             <section className='page-padding flex justify-between items-center gap-8'>
                 <img className='w-24 h-auto object-contain' src="/logo-campus-partly.png" alt="Logo" />
                 <div className="flex flex-col items-end">
-                    <h1 className='text-blue text-2xl'>Welkom op de Campus Zuid-Holland</h1>
-                    <p className="text-blue font-serif">{currentDay} 13 oktober 2023</p>
+                    <h1 className='text-darkBlue text-2xl'>Welkom op de Campus Zuid-Holland</h1>
+                    <p className="text-darkBlue font-serif">{currentDay} 13 oktober 2023</p>
                 </div>
             </section>
             <div className='grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr]'>
                 <section className='page-padding flex flex-col gap-4'>
-                    <p className='text-blue text-4xl mb-4'>Dagprogramma</p>
+                    <p className='text-darkBlue text-4xl mb-4'>Dagprogramma</p>
                     <div className='flex flex-col gap-4'>
                         <Space title="Geen afspraken" time="Beschikbaar" secondaryDescription="Entree" available={false} />
                         <Space title="Bijpraat lunch Campus" time="12:00 - 13:00" secondaryDescription="Ontmoetingsplein" available={false} />
@@ -24,8 +24,8 @@ export default function Dashboard() {
                         <Space title="Startup your day right - koffiemoment" time="9:30 - 10:00" secondaryDescription="Landschapszaal" available={false} />
                         <Space title="Workshop digitalisatie" time="13:30 - 14:30" secondaryDescription="Co-creatie" available />
                     </div>
-                    <div className="grid grid-cols-2 h-full">
-                        <div className="p-4 bg-blue text-white flex flex-col gap-4 justify-center h-full">
+                    <div className="grid grid-cols-2 h-full rounded-[4px] overflow-hidden">
+                        <div className="p-4 bg-darkBlue text-white flex flex-col gap-4 justify-center h-full">
                             <div className="flex flex-col gap-4">
                                 <p className="text-4xl">Iets vergeten te bespreken?</p>
                                 <div className="flex flex-col gap-4">
@@ -34,14 +34,14 @@ export default function Dashboard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-blue">
+                        <div className="bg-darkBlue">
                             <img src="/phone.webp" className='w-full h-full object-bottom object-contain' alt="Slack" />
                         </div>
                     </div>
                 </section>
                 <section className='page-padding h-full grid grid-cols-1 gap-4'>
-                    <div className="grid grid-cols-2 ">
-                        <div className="p-4 bg-green text-white flex flex-col gap-4 justify-between h-full">
+                    <div className="grid grid-cols-2 rounded-[4px] overflow-hidden">
+                        <div className="p-4  bg-green text-white flex flex-col gap-4 justify-between h-full">
                             <p className="text-2xl font-serif">Nieuws</p>
                             <div className="flex flex-col gap-4">
                                 <p className="font-serif text-2xl">16 November 2023</p>

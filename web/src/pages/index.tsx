@@ -27,8 +27,8 @@ export default function Home() {
       subText: "In samenwerking met een van de SiR alumni",
       imgSrc: "/tour.webp",
       bgColor: 'bg-lightBlue',
-      textColor: "text-blue",
-      bgTop: 'bg-blue'
+      textColor: "text-darkBlue",
+      bgTop: 'bg-darkBlue'
     },
     {
       text: "Workshop door Marianne Verbij",
@@ -43,8 +43,8 @@ export default function Home() {
       subText: "De locatie gaat veranderen. Binnenkort meer!",
       imgSrc: "/move.png",
       bgColor: 'bg-yellow',
-      textColor: "text-blue",
-      bgTop: "bg-blue",
+      textColor: "text-darkBlue",
+      bgTop: "bg-darkBlue",
     }
   ];
 
@@ -71,13 +71,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
         <meta name="description" content="Campus Zuid-Holland" />
       </Head>
+
       <Header />
-      {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-blue` : ` translate-y-full bg-blue/0 `}`}></div> */}
+      <section className='mt-[40px] page-padding flex flex-col items-start gap-8 bg-white border-b border-darkGrey/20'>
+        <div className="flex w-full justify-between items-center">
+          <img className='w-16 h-auto' src="/logo-campus-partly.png" alt="Logo" />
+          <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
+        </div>
+      </section>
+      {/* <div className={`fixed top-0 bottom-0 right-0 left-0 z-10 transition-all ${open ? ` -translate-y-0 bg-darkBlue` : ` translate-y-full bg-darkBlue/0 `}`}></div> */}
       <div className={`bg-white h-[85dvh] overflow-y-scroll sm:h-screen fixed bottom-0 right-0 left-0 z-50 shadow-2xl shadow-black duration-700 transition-all ${open ? ` -translate-y-0` : ` translate-y-full`}`}>
-        <div className="bg-blue w-full h-[20px] sticky top-0"></div>
+        <div className="bg-darkBlue w-full h-[20px] sticky top-0"></div>
         <div className="p-4 flex flex-col gap-4 max-w-4xl m-auto">
           <div className="w-full flex justify-between items-center ">
-            <p className='text-blue text-2xl'>Boek een ruimte</p>
+            <p className='text-darkBlue text-2xl'>Boek een ruimte</p>
             <img onClick={() => {
               setOpen(!open)
             }} src="/close.svg" className="w-10 h-10 cursor-pointer" alt="" />
@@ -85,16 +92,11 @@ export default function Home() {
           <Form />
         </div>
       </div>
-      <section className='page-padding flex flex-col items-start gap-8'>
-        <div className="flex w-full justify-between items-center">
-          <img className='w-16 h-auto' src="/logo-campus-partly.png" alt="Logo" />
-          <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
-        </div>
-        <h1 className='text-blue '>Welkom op de Campus Zuid-Holland</h1>
-      </section>
+
+      <h1 className='text-darkBlue page-padding !pb-0'>Welkom op de Campus Zuid-Holland</h1>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section className='page-padding grid grid-cols-1 gap-4'>
-          <div className="grid grid-cols-1 sm:grid-cols-2 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 rounded-[4px] overflow-hidden ">
             <div className={`p-4 ${slides[currentSlide].bgColor} ${slides[currentSlide].textColor} flex flex-col gap-4 justify-between h-full`}>
               <p className="text-sm font-serif">Nieuws</p>
               <div className="flex flex-col gap-4">
@@ -115,7 +117,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <p className='text-blue text-2xl'>Ruimtes</p>
+            <p className='text-darkBlue text-2xl'>Ruimtes</p>
             <div className='flex flex-col gap-4'>
               <Space title="Entree" people="2 - 12" available />
               <Space title="Ontmoetingsplein" people="2 - 12" available />
@@ -125,13 +127,13 @@ export default function Home() {
             </div>
             <div onClick={() => {
               setOpen(!open)
-            }} className="bg-blue hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer">
+            }} className="bg-darkBlue text-white hover:bg-[#16113B] active:bg-[#222222] hover:scale-105 active:scale-100 transition-all w-full rounded-[4px] py-2 px-4 text-center cursor-pointer">
               Boek een ruimte
             </div>
           </div>
         </section>
         <section className='page-padding h-fit grid grid-cols-1 gap-4'>
-          <p className='text-blue text-2xl'>Tools</p>
+          <p className='text-darkBlue text-2xl'>Tools</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-1  gap-4">
             <Tool title="Ga in gesprek met elkaar" cta="Naar chat" link="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey" image="/whatsapp.webp" />
             <Tool reverse title="Deel makkelijk documenten" cta="Open WeTransfer" link={'https://wetransfer.com/'} image="/wetransfer.webp" />

@@ -117,69 +117,71 @@ export function Form() {
         return result
     }
 
+    const inputClasses = `font-normal text-lg py-2 px-4 w-full border border-darkGrey hover:border-darkBlue focus:outline focus:outline-darkBlue text-darkBlue rounded-[4px] placeholder:text-darkGrey/75`
+
     return (
 
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-            <label htmlFor="space" className="text-lg text-blue cursor-pointer">Ruimte</label>
-            <select required name="space" id="space" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50">
+            <label htmlFor="space" className="text-lg text-darkBlue cursor-pointer">Ruimte</label>
+            <select required name="space" id="space" className={inputClasses}>
                 <option value="Atelier">Atelier - 20 personen</option>
                 <option value="Landschapszaal">Landschapszaal - 60 personen</option>
                 <option value="Co-creatie">Co-creatie - 40 personen</option>
             </select>
             <div className="w-full flex flex-col gap-2">
-                <p className="text-blue/75 flex flex-col gap-2">Datum</p>
-                <input required type="date" id="date" name="date" placeholder="Date" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                <p className="text-darkBlue/75 flex flex-col gap-2">Datum</p>
+                <input required type="date" id="date" name="date" placeholder="Date" className={inputClasses} />
             </div>
             <div className="flex w-full justify-between gap-4">
                 <div className="w-full flex flex-col gap-2">
-                    <p className="text-blue/75 flex flex-col gap-2">Start tijd</p>
-                    <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <p className="text-darkBlue/75 flex flex-col gap-2">Start tijd</p>
+                    <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className={inputClasses} />
                 </div>
                 <div className="w-full flex flex-col gap-2">
-                    <p className="text-blue/75 ">Eind tijd</p>
-                    <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className="text-lg p-4 w-full !h-[62px] bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                    <p className="text-darkBlue/75 ">Eind tijd</p>
+                    <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className={inputClasses} />
                 </div>
             </div>
-            <input required type="number" max={60} id="amount" name="amount" placeholder="Aantal personen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <p className="text-blue/75 flex flex-col gap-2">Opties voor uw boeking</p>
+            <input required type="number" max={60} id="amount" name="amount" placeholder="Aantal personen" className={inputClasses} />
+            <p className="text-darkBlue/75 flex flex-col gap-2">Opties voor uw boeking</p>
             <div className="flex flex-wrap gap-x-8 gap-y-4">
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
-                    <label htmlFor="lunch" className="text-lg text-blue cursor-pointer">Lunch</label>
+                    <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
+                    <label htmlFor="lunch" className="text-lg text-darkBlue cursor-pointer">Lunch</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
-                    <label htmlFor="coffee" className="text-lg text-blue cursor-pointer">Koffie & gebak</label>
+                    <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
+                    <label htmlFor="coffee" className="text-lg text-darkBlue cursor-pointer">Koffie & gebak</label>
                 </div>
                 <div className="flex items-center gap-2">
-                    <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 bg-black/10 checked:bg-blue cursor-pointer" />
-                    <label htmlFor="cheers" className="text-lg text-blue cursor-pointer">Borrel</label>
+                    <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
+                    <label htmlFor="cheers" className="text-lg text-darkBlue cursor-pointer">Borrel</label>
                 </div>
                 <div className="flex items-center gap-2">
                     <input checked={isScreensChecked}
-                        onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="cursor-pointer w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="screens" className="text-lg text-blue cursor-pointer">Schermen</label>
+                        onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
+                    <label htmlFor="screens" className="text-lg text-darkBlue cursor-pointer">Schermen</label>
                 </div>
                 <div className="flex items-center gap-2 ">
                     <input checked={isChairsChecked}
-                        onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="cursor-pointer w-5 h-5 bg-black/10 checked:bg-blue " />
-                    <label htmlFor="chairs" className="text-lg text-blue cursor-pointer">Stoelen</label>
+                        onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
+                    <label htmlFor="chairs" className="text-lg text-darkBlue cursor-pointer">Stoelen</label>
                 </div>
             </div>
             {isScreensChecked ?
-                <input required type="number" max={60} id="screensAmount" name="screensAmount" placeholder="Aantal schermen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                <input required type="number" max={60} id="screensAmount" name="screensAmount" placeholder="Aantal schermen" className={inputClasses} />
                 : null
             }
             {isChairsChecked ?
-                <input required type="number" max={60} id="chairsAmount" name="chairsAmount" placeholder="Aantal stoelen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
+                <input required type="number" max={60} id="chairsAmount" name="chairsAmount" placeholder="Aantal stoelen" className={inputClasses} />
                 : null
             }
-            <p className="text-blue/75 flex flex-col gap-2">Uw gegevens</p>
-            <input required type="text" id="name" name="name" placeholder="Naam" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input required type="text" id="email" name="email" placeholder="E-mail" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <textarea name="notes" id="notes" placeholder="Opmerkingen" className="text-lg p-4 w-full bg-black/5 outline-none text-blue placeholder:text-blue/50" />
-            <input type="submit" className={`${isLoading ? `bg-blue opacity-50` : isSubmitted ? `bg-green opacity-100` : `bg-blue opacity-100`} hover:brightness-105 hover:scale-105 active:scale-100 active:brightness-90 transition-all w-full text-white rounded-md py-4 px-2 text-center cursor-pointer`} value={isLoading ? `Versturen...` : isSubmitted ? `Aanvraag verstuurd!` : `Verstuur aanvraag`} />
+            <p className="text-darkBlue/75 flex flex-col gap-2">Uw gegevens</p>
+            <input required type="text" id="name" name="name" placeholder="Naam" className={inputClasses} />
+            <input required type="text" id="email" name="email" placeholder="E-mail" className={inputClasses} />
+            <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className={inputClasses} />
+            <textarea name="notes" id="notes" placeholder="Opmerkingen" className={inputClasses} />
+            <input type="submit" className={`${isLoading ? `bg-darkBlue opacity-50` : isSubmitted ? `bg-green opacity-100` : `bg-darkBlue text-white hover:bg-[#16113B] active:bg-[#222222]`}  hover:scale-105 active:scale-100 transition-all w-full text-white rounded-md py-2 px-4 text-center cursor-pointer`} value={isLoading ? `Versturen...` : isSubmitted ? `Aanvraag verstuurd!` : `Verstuur aanvraag`} />
         </form>
     )
 }
