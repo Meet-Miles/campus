@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Space } from "@/components/space";
 import { Tool } from "@/components/tool";
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -75,7 +76,9 @@ export default function Home() {
       <Header />
       <section className='mt-[40px] page-padding flex flex-col items-start gap-8 bg-white border-b border-darkGrey/20'>
         <div className="flex w-full justify-between items-center">
-          <img className='w-16 h-auto' src="/logo-campus-partly.png" alt="Logo" />
+          <Link href="/">
+            <img className='w-16 h-auto' src="/logo-campus-partly.png" alt="Logo" />
+          </Link>
           <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
         </div>
       </section>
@@ -134,11 +137,13 @@ export default function Home() {
         </section>
         <section className='page-padding h-fit grid grid-cols-1 gap-4'>
           <p className='text-darkBlue text-2xl'>Tools</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-1  gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2  gap-4">
             <Tool title="Ga in gesprek met elkaar" cta="Naar chat" link="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey" image="/whatsapp.webp" />
             <Tool reverse title="Deel makkelijk documenten" cta="Open WeTransfer" link={'https://wetransfer.com/'} image="/wetransfer.webp" />
+            <Tool title="Visualiseer ideeën" cta="Tekenen" link="/draw" image="/draw.png" />
           </div>
         </section>
+
       </div>
       <Footer />
     </div>
