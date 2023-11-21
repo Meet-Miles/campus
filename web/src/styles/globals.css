@@ -26,6 +26,10 @@ h1 {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%2E3092" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
 
+[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
 select {
     background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iNjgiIHZpZXdCb3g9IjAgMCAzNCA2OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNjg1MDYgMzEuNzU2TDE3LjAzNDYgMjEuNjI0TDI0LjMxNTQgMzEuNzU2SDkuNjg1MDZaIiBmaWxsPSIjNDQ0NDQ0Ii8+CjxwYXRoIGQ9Ik0yNC4zMTU0IDM2LjI0NEwxNy4wMzQ2IDQ2LjM3Nkw5LjY4NTA2IDM2LjI0NEgyNC4zMTU0WiIgZmlsbD0iIzQ0NDQ0NCIvPgo8L3N2Zz4K)
         no-repeat 95% 50%;

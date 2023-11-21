@@ -15,6 +15,7 @@ const config: Config = {
             },
             fontFamily: {
                 sans: ["var(--font-karbon)"],
+                sansRegular: ["var(--font-karbonRegular)"],
                 serif: ["var(--font-swift)"],
             },
         },

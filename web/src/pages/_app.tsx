@@ -14,6 +14,17 @@ const karbon = localFont({
   variable: '--font-karbon'
 })
 
+const karbonRegular = localFont({
+  src: [
+    {
+      path: './karbon-regular.otf',
+      weight: '400',
+      style: 'medium',
+    },
+  ],
+  variable: '--font-karbonRegular'
+})
+
 const swift = localFont({
   src: [
     {
@@ -26,7 +37,7 @@ const swift = localFont({
 })
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${karbon.variable} ${swift.variable}`}>
+    <main className={`${karbon.variable} ${karbonRegular.variable} ${swift.variable}`}>
       <Component {...pageProps} />
       <Analytics />
     </main>

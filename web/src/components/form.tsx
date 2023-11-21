@@ -117,55 +117,55 @@ export function Form() {
         return result
     }
 
-    const inputClasses = `font-normal text-lg py-2 px-4 w-full border border-darkGrey hover:border-darkBlue focus:outline focus:outline-darkBlue text-darkBlue rounded-[4px] placeholder:text-darkGrey/75`
+    const inputClasses = ` font-sansRegular text-lg py-2 px-4 w-full border border-darkGrey hover:border-darkBlue focus:outline focus:outline-darkBlue text-darkBlue rounded-[4px] placeholder:text-darkGrey/75`
 
     return (
 
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-            <label htmlFor="space" className="text-lg text-darkBlue cursor-pointer">Ruimte</label>
+            <label htmlFor="space" className="text-darkBlue flex flex-col gap-2 -mb-2">Ruimte</label>
             <select required name="space" id="space" className={inputClasses}>
                 <option value="Atelier">Atelier - 20 personen</option>
                 <option value="Landschapszaal">Landschapszaal - 60 personen</option>
                 <option value="Co-creatie">Co-creatie - 40 personen</option>
             </select>
             <div className="w-full flex flex-col gap-2">
-                <p className="text-darkBlue/75 flex flex-col gap-2">Datum</p>
+                <p className="text-darkBlue flex flex-col gap-2">Datum</p>
                 <input required type="date" id="date" name="date" placeholder="Date" className={inputClasses} />
             </div>
             <div className="flex w-full justify-between gap-4">
                 <div className="w-full flex flex-col gap-2">
-                    <p className="text-darkBlue/75 flex flex-col gap-2">Start tijd</p>
+                    <p className="text-darkBlue flex flex-col gap-2">Start tijd</p>
                     <input required type="time" id="startTime" name="startTime" placeholder="Start tijd" className={inputClasses} />
                 </div>
                 <div className="w-full flex flex-col gap-2">
-                    <p className="text-darkBlue/75 ">Eind tijd</p>
+                    <p className="text-darkBlue ">Eind tijd</p>
                     <input required type="time" id="endTime" name="endTime" placeholder="Eind tijd" className={inputClasses} />
                 </div>
             </div>
             <input required type="number" max={60} id="amount" name="amount" placeholder="Aantal personen" className={inputClasses} />
-            <p className="text-darkBlue/75 flex flex-col gap-2">Opties voor uw boeking</p>
+            <p className="text-darkBlue flex flex-col gap-2">Opties voor uw boeking</p>
             <div className="flex flex-wrap gap-x-8 gap-y-4">
                 <div className="flex items-center gap-2">
                     <input type="checkbox" id="lunch" name="lunch" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
-                    <label htmlFor="lunch" className="text-lg text-darkBlue cursor-pointer">Lunch</label>
+                    <label htmlFor="lunch" className="text-lg font-sansRegular text-darkBlue cursor-pointer">Lunch</label>
                 </div>
                 <div className="flex items-center gap-2">
                     <input type="checkbox" id="coffee" name="coffee" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
-                    <label htmlFor="coffee" className="text-lg text-darkBlue cursor-pointer">Koffie & gebak</label>
+                    <label htmlFor="coffee" className="text-lg font-sansRegular text-darkBlue cursor-pointer">Koffie & gebak</label>
                 </div>
                 <div className="flex items-center gap-2">
                     <input type="checkbox" id="cheers" name="cheers" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
-                    <label htmlFor="cheers" className="text-lg text-darkBlue cursor-pointer">Borrel</label>
+                    <label htmlFor="cheers" className="text-lg font-sansRegular text-darkBlue cursor-pointer">Borrel</label>
                 </div>
                 <div className="flex items-center gap-2">
                     <input checked={isScreensChecked}
                         onChange={(e) => setIsScreensChecked(e.target.checked)} type="checkbox" id="screens" name="screens" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
-                    <label htmlFor="screens" className="text-lg text-darkBlue cursor-pointer">Schermen</label>
+                    <label htmlFor="screens" className="text-lg font-sansRegular text-darkBlue cursor-pointer">Schermen</label>
                 </div>
                 <div className="flex items-center gap-2 ">
                     <input checked={isChairsChecked}
                         onChange={(e) => setIsChairsChecked(e.target.checked)} type="checkbox" id="chairs" name="chairs" className="w-5 h-5 border border-darkGrey rounded-[4px] checked:bg-green cursor-pointer" />
-                    <label htmlFor="chairs" className="text-lg text-darkBlue cursor-pointer">Stoelen</label>
+                    <label htmlFor="chairs" className="text-lg font-sansRegular text-darkBlue cursor-pointer">Stoelen</label>
                 </div>
             </div>
             {isScreensChecked ?
@@ -176,7 +176,7 @@ export function Form() {
                 <input required type="number" max={60} id="chairsAmount" name="chairsAmount" placeholder="Aantal stoelen" className={inputClasses} />
                 : null
             }
-            <p className="text-darkBlue/75 flex flex-col gap-2">Uw gegevens</p>
+            <p className="text-darkBlue flex flex-col gap-2">Uw gegevens</p>
             <input required type="text" id="name" name="name" placeholder="Naam" className={inputClasses} />
             <input required type="text" id="email" name="email" placeholder="E-mail" className={inputClasses} />
             <input required type="text" id="organisation" name="organisation" placeholder="Organisatie" className={inputClasses} />
