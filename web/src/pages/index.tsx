@@ -26,7 +26,7 @@ export default function Home() {
     {
       text: "Doe de digitale tour door de campus",
       subText: "In samenwerking met een van de SiR alumni",
-      imgSrc: "/tour.webp",
+      imgSrc: "/tour-min.jpg",
       bgColor: 'bg-lightBlue',
       textColor: "text-darkBlue",
       bgTop: 'bg-darkBlue'
@@ -34,7 +34,7 @@ export default function Home() {
     {
       text: "Workshop door Marianne Verbij",
       subText: "Verbeter co-creatie tussen de maatschappij en de overheid",
-      imgSrc: "/workshop.png",
+      imgSrc: "/workshop-min.jpg",
       bgColor: 'bg-[#ff6b02]',
       textColor: "text-white",
       bgTop: 'bg-white'
@@ -42,7 +42,7 @@ export default function Home() {
     {
       text: "Campus gaat verhuizen",
       subText: "De locatie gaat veranderen. Binnenkort meer!",
-      imgSrc: "/move.png",
+      imgSrc: "/verhuizen-min.jpg",
       bgColor: 'bg-yellow',
       textColor: "text-darkBlue",
       bgTop: "bg-darkBlue",
