@@ -41,7 +41,7 @@ export default function Dashboard() {
                 </section>
                 <section className='page-padding h-full grid grid-cols-1 gap-4'>
                     <div className="grid grid-cols-2 rounded-[4px] overflow-hidden">
-                        <div className="p-4 bg-[#ff6b02] text-white flex flex-col gap-4 justify-between h-full">
+                        <div className="p-4 bg-[#503d90] text-white flex flex-col gap-4 justify-between h-full">
                             <p className="text-2xl font-serif">Nieuws</p>
                             <div className="flex flex-col gap-4">
                                 <p className="font-serif text-2xl">16 November 2023</p>
