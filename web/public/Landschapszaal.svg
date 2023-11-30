@@ -3,9 +3,5 @@
 <mask id="mask0_8_714" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
 <rect x="0.5" y="0.5" width="39" height="39" fill="#505050" stroke="#2E3092"/>
 </mask>
-<g mask="url(#mask0_8_714)">
-<path d="M0 9.53833L5.45389 4.08525V-3.1864L10.9078 -8.63896L16.3622 -3.1864V4.08525L21.8161 9.53833L27.2699 4.08525V-3.1864L32.7244 -8.63896L38.1782 -3.1864V4.08525L43.6326 9.53833L49.0917 4.08525V-3.1864L54.5456 -8.63896L60 -3.1864V4.08525" stroke="#2E3092" stroke-width="1.06667" stroke-linecap="square"/>
-<path d="M16.3624 40.0001V18.6272L10.9085 13.1736L5.45459 18.6272V40.0001" stroke="#2E3092" stroke-width="1.06667" stroke-linecap="square"/>
-<path d="M38.1783 40.0001V18.6272L32.7244 13.1736L27.27 18.6272V40.0001" stroke="#2E3092" stroke-width="1.06667" stroke-linecap="square"/>
-</g>
+
 </svg>

@@ -35,7 +35,7 @@ export default function Home() {
       text: "Workshop door Marianne Verbij",
       subText: "Verbeter co-creatie tussen de maatschappij en de overheid",
       imgSrc: "/workshop.png",
-      bgColor: 'bg-green',
+      bgColor: 'bg-[#ff6b02]',
       textColor: "text-white",
       bgTop: 'bg-white'
     },
