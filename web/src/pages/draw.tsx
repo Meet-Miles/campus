@@ -1,7 +1,6 @@
 import { Button } from "@/components/button";
+import Editor from "@/components/editor";
 import { Header } from "@/components/header";
-import { Tldraw } from "@tldraw/tldraw";
-import '@tldraw/tldraw/tldraw.css';
 import Head from "next/head";
 import Link from "next/link";
 
@@ -26,10 +25,7 @@ export default function Draw() {
                 </div>
             </section>
 
-            <div className="tldraw__editor w-full absolute top-[152px]"
-                style={{ height: `calc(100vh - 152px - env(safe-area-inset-bottom))` }}>
-                <Tldraw />
-            </div>
+            <Editor />
         </div>
     )
 }
