@@ -1,13 +1,11 @@
 import { Button } from "@/components/button";
 import { Header } from "@/components/header";
-import dynamic from 'next/dynamic';
+import { Tldraw } from "@tldraw/tldraw";
+import '@tldraw/tldraw/tldraw.css';
 import Head from "next/head";
 import Link from "next/link";
 
-const Editor = dynamic(() => import('../components/editor'), { ssr: false })
-
 export default function Draw() {
-
     return (
         <div
             className={`flex flex-col justify-between min-h-screen`}
@@ -27,7 +25,11 @@ export default function Draw() {
                     <Button secondary label="Contact" link="mailto:campus@pzh.nl" />
                 </div>
             </section>
-            <Editor />
+
+            <div className="tldraw__editor w-full absolute top-[152px]"
+                style={{ height: `calc(100vh - 152px - env(safe-area-inset-bottom))` }}>
+                <Tldraw />
+            </div>
         </div>
     )
 }
