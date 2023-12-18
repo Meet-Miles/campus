@@ -50,6 +50,14 @@ export function Header() {
                     <p>Zondag</p>
                     <p>Gesloten</p>
                 </div>
+                <div className="w-full flex items-center gap-4">
+                    <a target="_blank" rel="noreferrer" href="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey">
+                        <img src="/wa.svg" className="w-6 h-8 opacity-50 hover:opacity-100 transition-all cursor-pointer" alt="WhatsApp" />
+                    </a>
+                    <a target="_blank" rel="noreferrer" href="https://wetransfer.com">
+                        <img src="/wetransfer.svg" className="w-8 h-8 opacity-50 hover:opacity-100 transition-all cursor-pointer" alt="WhatsApp" />
+                    </a>
+                </div>
             </div>
         </header>
     )
