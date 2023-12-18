@@ -140,7 +140,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-2  gap-4">
             <Tool title="Ga in gesprek met elkaar" cta="Naar chat" link="https://chat.whatsapp.com/L081b1M1qkjDmdDC36J0Ey" image="/whatsapp.webp" />
             <Tool reverse title="Deel makkelijk documenten" cta="Open WeTransfer" link={'https://wetransfer.com/'} image="/wetransfer.webp" />
-            <Tool title="Visualiseer ideeën" cta="Tekenen" link="/draw" image="/draw.png" />
+            {/* <Tool title="Visualiseer ideeën" cta="Tekenen" link="/draw" image="/draw.png" /> */}
           </div>
         </section>
 
