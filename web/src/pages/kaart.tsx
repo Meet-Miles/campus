@@ -26,7 +26,7 @@ export default function Kaart() {
 
             <iframe width="100%" height="100%" style={{
                 height: 'calc(100vh - 152px)'
-            }} src="https://miro.com/app/live-embed/uXjVNDqdhvs=/?moveToViewport=4175,-1,3135,1738&embedId=789239588597" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+            }} src="https://miro.com/app/live-embed/uXjVNDqdhvs=/?moveToViewport=4175,-1,3135,1738&embedId=789239588597" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowFullScreen></iframe>
         </div>
     )
 }
