@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
@@ -57,6 +58,9 @@ export function Header() {
                     <a target="_blank" rel="noreferrer" href="https://wetransfer.com">
                         <img src="/wetransfer.svg" className="w-8 h-8 opacity-50 hover:opacity-100 transition-all cursor-pointer" alt="WhatsApp" />
                     </a>
+                    <Link href="/kaart">
+                        <img src="/miro.png" className="w-12 object-contain h-8 opacity-50 hover:opacity-100 transition-all cursor-pointer" alt="Digitale kaart" />
+                    </Link>
                 </div>
             </div>
         </header>
